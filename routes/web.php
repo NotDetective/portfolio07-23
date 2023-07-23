@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('view');
+    return view('landing-page');
 });
 
 
 // give user a 404 error for testing 
 
-Route::get('/ph', function () {
+Route::get('/404', function () {
     return abort('404');
 });
