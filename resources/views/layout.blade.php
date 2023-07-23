@@ -7,37 +7,42 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <title>Portfolio Micha</title>
 </head>
-<body>
+<body class="font-inter ">
     
     <header class="px-[5%] w-full h-24 drop-shadow-md bg-white flex justify-between items-center">
-        <div class="flex flex-col h-auto justify-center items-center">
-            <h1 class="text-4xl font-inter drop-shadow-md text-lightblue font-bold">マイカ</h1>
-            <div class="h-2 w-40 bg-lightblue"></div>
-            <h1 class="text-4xl font-inter drop-shadow-md text-lightblue font-bold">Micha</h1>
-        </div>
+        <x-logo></x-logo>
         <nav class="flex justify-between w-1/4">
-            <a href="/#">
-                <h1 class="text-4xl font-inter drop-shadow-md text-lightblue font-bold">About Me</h1>
+            <a href="ph">
+                <h1 class="text-4xl drop-shadow-md text-primary font-bold">About Me</h1>
             </a>
-            <a href="/#">
-                <h1 class="text-4xl font-inter drop-shadow-md text-lightblue font-bold" >My Work</h1>
+            <a href="ph">
+                <h1 class="text-4xl drop-shadow-md text-primary font-bold" >My Work</h1>
             </a>
         </nav>
     </header>
 
-    @yield('content')
+    <main class="h-screen">
+        @yield('content')
+    </main>
     
-
-    <footer>
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48" class=" fill-lightblue fixed bottom-3 right-2/4 hover:cursor-pointer">
-            <path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/>
-        </svg>
-        <div class=" h-24 w-24 rounded-full flex justify-center items-center border-4 border-lightblue fill-lightblue fixed bottom-3 right-3 hover:bg-lightblue hover:fill-white hover:cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48" class="rotate-180">
-                <path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/>
-            </svg>
+    <footer class="w-full h-24 border-t-4 border-primary flex justify-evenly items-center text-primary">
+        <div class="w-64 flex items-center justify-between">
+            <a href="https://www.linkedin.com/in/micha-elmans-801144273/" target="_blank">
+                <img src="images/LI-In-Bug.png" alt="linkedin logo" class="h-12 w-12">
+            </a>
+            <a href="https://github.com/NotDetective" target="_blank">
+                <img src="images/github-mark.svg" alt="github mark" class="h-12 w-12">
+            </a>
+            <a href="ph">
+                <img src="images/email-icon.svg" alt="mail icon" class="h-12 w-12">
+            </a>
+        </div>
+        <div class="flex w-96 h-auto justify-between">
+            <a href="ph">
+                <p>About this website</p>
+            </a>
+            <p>© 2023 Micha Elmans</p>
         </div>
     </footer>
-
 </body>
 </html>
