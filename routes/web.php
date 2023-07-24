@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('landing-page');
 });
 
+Route::get('/about-me', function () {
+    return view('about-me');
+});
+
 
 // give user a 404 error for testing 
 
