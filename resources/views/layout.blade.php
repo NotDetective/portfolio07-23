@@ -22,8 +22,9 @@
     </header>
 
     <main class="h-screen">
-        @yield('content')
+        @yield('content') 
     </main>
+    
     
     <footer class="w-full h-24 border-t-4 border-primary flex justify-evenly items-center text-primary">
         <div class="w-64 flex items-center justify-between">

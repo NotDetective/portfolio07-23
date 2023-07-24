@@ -534,6 +534,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
+.m-6 {
+  margin: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -564,6 +572,30 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[775px\] {
+  height: 775px;
+}
+
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.h-0 {
+  height: 0px;
+}
+
+.h-80 {
+  height: 20rem;
 }
 
 .w-1\/4 {
@@ -598,6 +630,22 @@ video {
   width: 100%;
 }
 
+.w-\[550px\] {
+  width: 550px;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -618,6 +666,10 @@ video {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -626,13 +678,40 @@ video {
   border-radius: 20px;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.border {
+  border-width: 1px;
+}
+
 .border-t-4 {
   border-top-width: 4px;
+}
+
+.border-t {
+  border-top-width: 1px;
 }
 
 .border-primary {
   --tw-border-opacity: 1;
   border-color: rgb(15 163 226 / var(--tw-border-opacity));
+}
+
+.border-darksecondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(8 103 136 / var(--tw-border-opacity));
+}
+
+.border-lightpsecondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(24 154 180 / var(--tw-border-opacity));
+}
+
+.border-t-primary {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(15 163 226 / var(--tw-border-opacity));
 }
 
 .bg-primary {
@@ -643,6 +722,28 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 255 / var(--tw-bg-opacity));
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-7 {
+  padding: 1.75rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .px-\[5\%\] {
@@ -665,6 +766,16 @@ video {
 
 .text-\[40px\] {
   font-size: 40px;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-bold {
