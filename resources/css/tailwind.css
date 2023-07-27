@@ -570,8 +570,24 @@ video {
   height: 24rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[220px\] {
+  height: 220px;
+}
+
+.h-\[250px\] {
+  height: 250px;
+}
+
 .h-\[300px\] {
   height: 300px;
+}
+
+.h-\[330px\] {
+  height: 330px;
 }
 
 .h-\[36px\] {
@@ -586,6 +602,10 @@ video {
   height: 56px;
 }
 
+.h-\[700px\] {
+  height: 700px;
+}
+
 .h-\[775px\] {
   height: 775px;
 }
@@ -598,36 +618,36 @@ video {
   height: 100vh;
 }
 
-.h-44 {
-  height: 11rem;
+.h-\[0px\] {
+  height: 0px;
 }
 
-.h-72 {
-  height: 18rem;
+.h-\[70px\] {
+  height: 70px;
+}
+
+.h-\[80px\] {
+  height: 80px;
 }
 
 .h-\[\] {
   height: ;
 }
 
-.h-\[600px\] {
-  height: 600px;
-}
-
-.h-\[900px\] {
-  height: 900px;
-}
-
-.h-\[400px\] {
-  height: 400px;
-}
-
 .h-\[200px\] {
   height: 200px;
 }
 
-.h-\[500px\] {
-  height: 500px;
+.h-\[120px\] {
+  height: 120px;
+}
+
+.h-\[160px\] {
+  height: 160px;
+}
+
+.h-\[60px\] {
+  height: 60px;
 }
 
 .w-1\/4 {
@@ -654,8 +674,16 @@ video {
   width: 20px;
 }
 
+.w-\[220px\] {
+  width: 220px;
+}
+
 .w-\[300px\] {
   width: 300px;
+}
+
+.w-\[350px\] {
+  width: 350px;
 }
 
 .w-\[360px\] {
@@ -664,6 +692,10 @@ video {
 
 .w-\[36px\] {
   width: 36px;
+}
+
+.w-\[480px\] {
+  width: 480px;
 }
 
 .w-\[500px\] {
@@ -694,28 +726,32 @@ video {
   width: 100%;
 }
 
-.w-\[0px\] {
-  width: 0px;
-}
-
-.w-\[7\] {
-  width: 7;
-}
-
 .w-\[\] {
   width: ;
 }
 
-.w-\[350\] {
-  width: 350;
+.w-\[200px\] {
+  width: 200px;
 }
 
-.w-\[350px\] {
-  width: 350px;
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
+.grid-flow-row {
+  grid-auto-flow: row;
 }
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -724,6 +760,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-start {
@@ -750,12 +790,28 @@ video {
   justify-content: space-evenly;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .rounded-\[20px\] {
   border-radius: 20px;
 }
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-b-4 {
@@ -776,9 +832,29 @@ video {
   border-color: rgb(15 163 226 / var(--tw-border-opacity));
 }
 
-.bg-green {
+.bg-\[\#4F5D95\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 255 0 / var(--tw-bg-opacity));
+  background-color: rgb(79 93 149 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#563D7C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 61 124 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#B07219\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(176 114 25 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E44B23\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 75 35 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F1E05A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 224 90 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -791,46 +867,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[green\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 128 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[\#E44B23\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(228 75 35 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#563D7C\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(86 61 124 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#F1E05A\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 224 90 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#B07219\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(176 114 25 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#4F5D95\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(79 93 149 / var(--tw-bg-opacity));
-}
-
-.bg-\[4F5D95\] {
-  background-color: 4F5D95;
-}
-
 .p-7 {
   padding: 1.75rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-\[5\%\] {
@@ -840,6 +882,16 @@ video {
 
 .font-inter {
   font-family: Inter var;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -862,16 +914,6 @@ video {
 
 .text-\[40px\] {
   font-size: 40px;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {

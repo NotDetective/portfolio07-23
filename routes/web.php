@@ -21,6 +21,14 @@ Route::get('/about-me', function () {
     return view('about-me');
 });
 
+Route::get('/my-work', function () {
+    return view('my-work');
+});
+
+Route::get('/about-website', function () {
+    return abort('404');
+});
+
 
 // give user a 404 error for testing 
 
