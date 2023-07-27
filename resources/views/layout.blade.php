@@ -15,7 +15,7 @@
             <a href="about-me">
                 <h1 class="text-4xl drop-shadow-md text-primary font-bold">About Me</h1>
             </a>
-            <a href="404">
+            <a href="my-work">
                 <h1 class="text-4xl drop-shadow-md text-primary font-bold" >My Work</h1>
             </a>
         </nav>
@@ -39,7 +39,7 @@
             </a>
         </div>
         <div class="flex w-96 h-auto justify-between">
-            <a href="404">
+            <a href="about-website">
                 <p>About this website</p>
             </a>
             <p>© 2023 Micha Elmans</p>
