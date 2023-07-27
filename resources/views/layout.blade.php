@@ -10,7 +10,8 @@
 <body class="font-inter ">
     
     <header class="px-[5%] w-full h-24 drop-shadow-md bg-white flex justify-between items-center">
-        <x-logo></x-logo>
+        <a href="home">
+            <x-logo></x-logo></a>
         <nav class="flex justify-between w-1/4">
             <a href="about-me">
                 <h1 class="text-4xl drop-shadow-md text-primary font-bold">About Me</h1>
@@ -34,9 +35,10 @@
             <a href="https://github.com/NotDetective" target="_blank">
                 <img src="images/github-mark.svg" alt="github mark" class="h-12 w-12 hover:scale-125 duration-300">
             </a>
-            <a href="404">
+            {{-- still under construction --}}
+            {{-- <a href="404">
                 <img src="images/email-icon.svg" alt="mail icon" class="h-12 w-12 hover:scale-125 duration-300">
-            </a>
+            </a> --}}
         </div>
         <div class="flex w-96 h-auto justify-between">
             <a href="about-website">
