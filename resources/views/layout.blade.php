@@ -12,7 +12,7 @@
     <header class="px-[5%] w-full h-24 drop-shadow-md bg-white flex justify-between items-center">
         <x-logo></x-logo>
         <nav class="flex justify-between w-1/4">
-            <a href="404">
+            <a href="about-me">
                 <h1 class="text-4xl drop-shadow-md text-primary font-bold">About Me</h1>
             </a>
             <a href="404">
@@ -22,8 +22,9 @@
     </header>
 
     <main class="h-screen">
-        @yield('content')
+        @yield('content') 
     </main>
+    
     
     <footer class="w-full h-24 border-t-4 border-primary flex justify-evenly items-center text-primary">
         <div class="w-64 flex items-center justify-between">
