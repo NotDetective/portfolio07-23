@@ -26,16 +26,13 @@ Route::get('/my-work', function () {
 });
 
 Route::get('/about-website', function () {
-    return abort('404');
+    return view('about-website');
 });
 
 Route::get('/beta-build', function () {
-    return view('beta-build');
+    return view('about-website');
 });
 
-
-// give user a 404 error for testing 
-
-Route::get('/404', function () {
-    return abort('404');
+Route::get('/home', function () {
+    return view('landing-page');
 });
