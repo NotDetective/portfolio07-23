@@ -29,6 +29,10 @@ Route::get('/about-website', function () {
     return abort('404');
 });
 
+Route::get('/beta-build', function () {
+    return view('beta-build');
+});
+
 
 // give user a 404 error for testing 
 
