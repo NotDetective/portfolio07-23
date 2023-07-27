@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <title>Portfolio Micha</title>
+    <title>Portfolio Micha alpha build</title>
 </head>
 <body class="font-inter ">
     

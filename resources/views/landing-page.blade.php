@@ -14,7 +14,7 @@
 
     <dialog open="true" class="bottom-9">
         <div class="bg-red text-white w-80 h-40 flex flex-col items-center justify-center blur-none">
-            <h1 class="text-2xl">Beta version of website</h1>
+            <h1 class="text-2xl">alpha version of website</h1>
             <p class="text-2xl">work in progress</p>
             <a href="beta-build">
                 <p class="underline">more infomation? click here</p>
