@@ -17,9 +17,22 @@ Route::get('/', function () {
     return view('landing-page');
 });
 
+Route::get('/about-me', function () {
+    return view('about-me');
+});
 
-// give user a 404 error for testing 
+Route::get('/my-work', function () {
+    return view('my-work');
+});
 
-Route::get('/404', function () {
-    return abort('404');
+Route::get('/about-website', function () {
+    return view('about-website');
+});
+
+Route::get('/beta-build', function () {
+    return view('about-website');
+});
+
+Route::get('/home', function () {
+    return view('landing-page');
 });
