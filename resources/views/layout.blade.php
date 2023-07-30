@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <title>Portfolio Micha alpha build</title>
+    <title>Portfolio Micha</title>
 </head>
 <body class="font-inter ">
     
@@ -35,10 +35,9 @@
             <a href="https://github.com/NotDetective" target="_blank">
                 <img src="images/github-mark.svg" alt="github mark" class="h-12 w-12 hover:scale-125 duration-300">
             </a>
-            {{-- still under construction --}}
-            {{-- <a href="404">
+            <a href="404">
                 <img src="images/email-icon.svg" alt="mail icon" class="h-12 w-12 hover:scale-125 duration-300">
-            </a> --}}
+            </a>
         </div>
         <div class="flex w-96 h-auto justify-between">
             <a href="about-website">
