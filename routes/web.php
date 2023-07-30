@@ -29,10 +29,6 @@ Route::get('/about-website', function () {
     return view('about-website');
 });
 
-Route::get('/beta-build', function () {
-    return view('about-website');
-});
-
 Route::get('/home', function () {
     return view('landing-page');
 });

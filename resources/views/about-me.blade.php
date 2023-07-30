@@ -12,7 +12,7 @@
             <div class="flex flex-col items-center h-80 w-[500px] justify-evenly border-t-4 border-lightpsecondary">
                 <div class="flex items-center">
                     <h1 class="text-4xl">age</h1>
-                    <h1 class="m-3 text-5xl">17</h1>
+                    <h1 class="m-3 text-5xl" id="age">(•ิ_•ิ)?</h1>
                 </div>
                 <div class="flex flex-col items-center">
                     <p class="text-4xl">Languages</p>
@@ -90,6 +90,8 @@
             </div>
         </div>
         
-
     </section>
+
+    <script src="js/changeAge.js"></script>
+    <script src="js/changeColor.js"></script>
 @endsection
