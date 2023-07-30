@@ -22,37 +22,23 @@
    
     <div class="flex flex-wrap flex-col h-[700px] w-[1200px] overflow-y-auto justify-between items-center">
 
-        {{-- temporary code so the idee of the page is there --}}
-        <div class="flex flex-wrap flex-col h-[700px] w-[1200px] overflow-y-auto justify-between items-center blur-sm">
-            @for ($i = 0; $i < 5; $i++ )
-                <a href="">
-                    <div class="w-[500px] h-[330px] bg-white drop-shadow-md flex flex-col items-center justify-around" >
-                        <div class="border-b-4 border-lightpsecondary w-[480px] h-[80px] flex items-center justify-center">
-                            <h1 class="font-bold text-4xl">Repo Name</h1>
-                        </div>
-                        <div class="flex flex-col h-[160px] justify-between items-center">
-                            <div class="flex w-[150px] items-center justify-evenly">
-                                <p class="text-2xl">lorem</p>
-                                <p class="text-2xl">project</p>
-                            </div>
-                            <p class="text-2xl">Updated on Apr 17</p>
-                            <p class="text-2xl">Archived</p>
-                        </div>
+        @for ($i = 0; $i < 5; $i++ )
+        <a href="">
+            <div class="w-[500px] h-[330px] bg-white drop-shadow-md flex flex-col items-center justify-around" >
+                <div class="border-b-4 border-lightpsecondary w-[480px] h-[80px] flex items-center justify-center">
+                    <h1 class="font-bold text-4xl">Repo Name</h1>
+                </div>
+                <div class="flex flex-col h-[160px] justify-between items-center">
+                    <div class="flex w-[150px] items-center justify-evenly">
+                        <p class="text-2xl">lorem</p>
+                        <p class="text-2xl">project</p>
                     </div>
-                </a>
-            @endfor
-       </div>
-
-        <dialog open="true">
-            <div class="bg-red text-white w-80 h-40 flex flex-col items-center justify-center blur-none">
-                <h1 class="text-2xl">Comming soon</h1>
-                <p class="text-2xl">work in progress</p>
-                <a href="beta-build">
-                    <p class="underline">more infomation? click here</p>
-                </a>
+                    <p class="text-2xl">Updated on Apr 17</p>
+                    <p class="text-2xl">Archived</p>
+                </div>
             </div>
-        </dialog>
-
+        </a>
+    @endfor
     </div>
 </section>
 
