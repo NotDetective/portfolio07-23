@@ -29,7 +29,7 @@
 
                 <div class="flex flex-col items-start w-[360px]">
                     <div class="flex items-center">
-                        <div class="bg-[#E44B23] h-[36px] w-[36px] rounded-full"></div>
+                        <div class="h-[36px] w-[36px] rounded-full" id="AV24750549236573"></div>
                         <div class="w-[20px]"></div>
                         <h1 class="text-[35px]">HTML</h1>
                     </div>
@@ -38,7 +38,7 @@
 
                 <div class="flex flex-col items-start w-[360px]">
                     <div class="flex items-center">
-                        <div class="bg-[#563D7C] h-[36px] w-[36px] rounded-full"></div>
+                        <div class="h-[36px] w-[36px] rounded-full" id="A6641393133X0697"></div>
                         <div class="w-[20px]"></div>
                         <h1 class="text-[35px]">CSS</h1>
                     </div>
@@ -47,7 +47,7 @@
 
                 <div class="flex flex-col items-start w-[360px]">
                     <div class="flex items-center">
-                        <div class="bg-[#F1E05A] h-[36px] w-[36px] rounded-full"></div>
+                        <div class=" h-[36px] w-[36px] rounded-full" id="A79P185968106631"></div>
                         <div class="w-[20px]"></div>
                         <h1 class="text-[35px]">JavaScript</h1>
                     </div>
@@ -56,7 +56,7 @@
 
                 <div class="flex flex-col items-start w-[360px]">
                     <div class="flex items-center">
-                        <div class="bg-[#B07219] h-[36px] w-[36px] rounded-full"></div>
+                        <div class="h-[36px] w-[36px] rounded-full" id="A483626504515L16"></div>
                         <div class="w-[20px]"></div>
                         <h1 class="text-[35px]">Java</h1>
                     </div>
@@ -65,7 +65,7 @@
 
                 <div class="flex flex-col items-start w-[360px]">
                     <div class="flex items-center">
-                        <div class="bg-[#4F5D95] h-[36px] w-[36px] rounded-full"></div>
+                        <div class="h-[36px] w-[36px] rounded-full" id="A26769694967056G"></div>
                         <div class="w-[20px]"></div>
                         <h1 class="text-[35px]">PHP</h1>
                     </div>
@@ -74,7 +74,7 @@
 
                 <div class="flex flex-col items-start w-[360px]">
                     <div class="flex items-center">
-                        <div class="bg-[#4F5D95] h-[36px] w-[36px] rounded-full"></div>
+                        <div class="h-[36px] w-[36px] rounded-full" id="A7618955966857A4""></div>
                         <div class="w-[20px]"></div>
                         <h1 class="text-[35px]">Laravel</h1>
                     </div>
@@ -94,4 +94,12 @@
 
     <script src="js/changeAge.js"></script>
     <script src="js/changeColor.js"></script>
+    <script>
+        changeColor('HTML', 'AV24750549236573')
+        changeColor('CSS', 'A6641393133X0697')
+        changeColor('JavaScript', 'A79P185968106631')
+        changeColor('Java', 'A483626504515L16')
+        changeColor('PHP', 'A26769694967056G')
+        changeColor('PHP', 'A7618955966857A4')
+    </script>
 @endsection

@@ -199,14 +199,14 @@ const jsonData = {
     "nesC": "#94B0C7"
 };
 
-const changeColor = (PL, id) => {
+const changeColor = (pl, id) => {
 
-    const foundItem = findItemByName(PL);
+    const foundItem = findItemByName(pl);
 
     if (foundItem) {
-        console.log(foundItem);
-        const element = document.querySelector('#'+ id);
         
+        const element = document.querySelector('#'+ id)
+        element.style.backgroundColor = foundItem
     }else{
         console.log('no item found');
     }
@@ -215,5 +215,3 @@ const changeColor = (PL, id) => {
 function findItemByName(nameToFind) {
     return jsonData[nameToFind];
 }
-
-changeColor('si')
