@@ -9,8 +9,8 @@
 </head>
 <body class="font-inter overflow-x-hidden">
 
-    <header class="px-[5%] w-full h-24 drop-shadow-lg bg-white flex justify-between items-center">
-        <a href="home">
+    <header class="px-[5%] w-full h-24 drop-shadow-lg bg-white flex justify-between items-center z-50">
+        <a href="#">
             <x-logo></x-logo>
         </a>
         <div class="w-[500px]">
@@ -22,7 +22,9 @@
         </div>
     </header>
 
-    @yield('content') 
-      
+    <main>
+        @yield('content')
+    </main>
+
 </body>
 </html>
