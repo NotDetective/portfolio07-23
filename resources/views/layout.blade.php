@@ -7,44 +7,22 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <title>Portfolio Micha</title>
 </head>
-<body class="font-inter ">
-    
-    <header class="px-[5%] w-full h-24 drop-shadow-md bg-white flex justify-between items-center">
+<body class="font-inter overflow-x-hidden">
+
+    <header class="px-[5%] w-full h-24 drop-shadow-lg bg-white flex justify-between items-center">
         <a href="home">
-            <x-logo></x-logo></a>
-        <nav class="flex justify-between w-1/4">
-            <a href="about-me">
-                <h1 class="text-4xl drop-shadow-md text-primary font-bold">About Me</h1>
-            </a>
-            <a href="my-work">
-                <h1 class="text-4xl drop-shadow-md text-primary font-bold" >My Work</h1>
-            </a>
-        </nav>
+            <x-logo></x-logo>
+        </a>
+        <div class="w-[500px]">
+            <nav class="flex justify-between w-full">
+                <x-nav-button href="about-me">About Me</x-nav-button>
+                <x-nav-button href="blog">Blog</x-nav-button>
+                <x-nav-button href="my-work">My Work</x-nav-button>
+            </nav>
+        </div>
     </header>
 
-    <main class="h-screen">
-        @yield('content') 
-    </main>
-    
-    
-    <footer class="w-full h-24 border-t-4 border-primary flex justify-evenly items-center text-primary">
-        <div class="w-64 flex items-center justify-between">
-            <a href="https://www.linkedin.com/in/micha-elmans-801144273/" target="_blank">
-                <img src="images/LI-In-Bug.png" alt="linkedin logo" class="h-11 w-12 hover:scale-125 duration-300">
-            </a>
-            <a href="https://github.com/NotDetective" target="_blank">
-                <img src="images/github-mark.svg" alt="github mark" class="h-12 w-12 hover:scale-125 duration-300">
-            </a>
-            <a href="404">
-                <img src="images/email-icon.svg" alt="mail icon" class="h-12 w-12 hover:scale-125 duration-300">
-            </a>
-        </div>
-        <div class="flex w-96 h-auto justify-between">
-            <a href="about-website">
-                <p>About this website</p>
-            </a>
-            <p>© 2023 Micha Elmans</p>
-        </div>
-    </footer>
+    @yield('content') 
+      
 </body>
 </html>

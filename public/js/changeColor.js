@@ -204,7 +204,6 @@ const changeColor = (pl, id) => {
     const foundItem = findItemByName(pl);
 
     if (foundItem) {
-        
         const element = document.querySelector('#'+ id)
         element.style.backgroundColor = foundItem
     }else{

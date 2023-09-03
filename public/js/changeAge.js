@@ -6,7 +6,7 @@ const calAge = (birthDay, birthMonth, birthYear) => {
     let year = date.getFullYear()
     let day = date.getDate()
 
-    if ((month > 3) || (month == birthMonth && day >= birthDay)) {
+    if ((month > birthMonth) || (month == birthMonth && day >= birthDay)) {
         ageCal = year - birthYear;
       } else {
         ageCal = year - birthYear - 1;
@@ -20,6 +20,6 @@ const changeAge = (ageInYears) => {
     ageElement.innerHTML = ageInYears
 }
 
-calAge(3,9,2006)
+calAge(9,3,2006)
 
 
