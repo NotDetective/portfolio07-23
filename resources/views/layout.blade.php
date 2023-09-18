@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <title>Portfolio Micha</title>
+
+    @vite('resources/css/app.css')
 </head>
 <body class="font-inter overflow-x-hidden">
 
@@ -21,7 +23,6 @@
             </nav>
         </div>
     </header>
-
     <main>
         @yield('content')
     </main>
