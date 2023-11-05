@@ -9,12 +9,10 @@
 
     @vite('resources/css/app.css')
 </head>
-<body class="font-sofia-sans text-custom_dark max-w-screen min-h-screen">
-<div class="w-full h-full">
+<body class="font-sofia-sans text-purpleDark max-w-screen min-h-screen flex">
 
-
-    <div class="w-20 h-screen border-r-2 border-custom_dark p-2">
-        <div class="w-full h-full flex flex-col items-center">
+    <div class="w-20 h-screen border-r-2 border-purpleDark p-2">
+        <div class="h-full flex flex-col items-center">
 
             <div class="h-1/6">
                 <img src="https://avatars.githubusercontent.com/u/56188780?v=4" alt="Micha"
@@ -118,12 +116,13 @@
                     </svg>
                 </button>
             </div>
-
-            <main>
-                {{ $slot }}
-            </main>
-
         </div>
+    </div>
+
+    <main class="h-screen w-full">
+        {{ $slot }}
+    </main>
+
 @vite('resources/js/app.js')
 </body>
 </html>

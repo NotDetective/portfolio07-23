@@ -5,17 +5,19 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
-  theme: {
-    extend: {
-        colors: {
-            background: '#ffffff',
-            custom_dark: '#190E25',
+    theme: {
+        extend: {
+            colors: {
+                background: '#ffffff',
+                purpleDark: '#190E25',
+                blue: '#0FA3E2',
+                purple: '#6366F1',
+            },
+            fontFamily: {
+                sofiaSans: ['Sofia Sans', 'sans-serif'],
+            }
         },
-        fontFamily: {
-            sofiaSans: ['Sofia Sans', 'sans-serif'],
-        }
     },
-  },
-  plugins: [],
+    plugins: [],
 }
 
