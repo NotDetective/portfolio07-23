@@ -8,13 +8,13 @@ export default {
   theme: {
     extend: {
         colors: {
-            primary: '#0FA3E2',
-            darksecondary: '#086788',
-            lightsecondary: '#189AB4',
-            background: '#A5E7ED',
+            background: '#ffffff',
+            gradient_one: '#0FA3E2',
+            gradient_two: '#6366F1',
+            custom_dark: '#190E25',
         },
         fontFamily: {
-            inter: ['Inter var'],
+            sofiaSans: ['Sofia Sans', 'sans-serif'],
         }
     },
   },
