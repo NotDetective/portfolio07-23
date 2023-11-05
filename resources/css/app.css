@@ -4,6 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --gradient : linear-gradient(180deg, #0FA3E2 0%, #6366F1 67.19%);
+}
+
 .font-sofia-sans {
     font-family: 'Sofia Sans', sans-serif;
+}
+
+.bg-gradient {
+    background: var(--gradient);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-gradient{
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

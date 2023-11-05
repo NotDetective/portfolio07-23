@@ -9,8 +9,6 @@ export default {
     extend: {
         colors: {
             background: '#ffffff',
-            gradient_one: '#0FA3E2',
-            gradient_two: '#6366F1',
             custom_dark: '#190E25',
         },
         fontFamily: {
