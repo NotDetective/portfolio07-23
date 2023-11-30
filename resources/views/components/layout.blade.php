@@ -15,7 +15,7 @@
         <div class="h-full flex flex-col items-center">
 
             <div class="h-1/6">
-                <img src="https://avatars.githubusercontent.com/u/56188780?v=4" alt="Micha"
+                <img src="images/smiley-logo-placeholder.png" alt="Website logo"
                      class="rounded-full w-14 h-14">
             </div>
 
