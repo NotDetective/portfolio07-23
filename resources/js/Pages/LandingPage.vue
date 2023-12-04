@@ -1,9 +1,10 @@
-<x-layout>
+<script setup>
 
-    @php
-        $text = file_get_contents(resource_path('views/homepage.blade.php'));
-    @endphp
+let text = `<?php echo $text; ?>`;
 
+</script>
+
+<template>
     <div class="w-full h-full flex p-5">
         <div class="w-full h-full flex">
             <section class="h-5/6 w-1/2 flex items-center justify-center">
@@ -27,11 +28,10 @@
             <section class="h-full w-1/2 flex items-center text-right mr-5">
                 <pre class="h-11/12">
                     <code class="text-2xl text-gradient w-full">
-                        {{ $text }}
+                        {{ text }}
                     </code>
                 </pre>
             </section>
         </div>
     </div>
-
-</x-layout>
+</template>
