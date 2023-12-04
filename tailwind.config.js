@@ -1,25 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  mode: "jit",
-  content: ['./resources/**/*.{php,js,html}'],
-  theme: {
-    colors: {
-      primary: '#0FA3E2',
-      darksecondary: '#086788',
-      lightpsecondary: '#189AB4',
-
-      white: '#ffffff',
-
-      red: '#ff0000',
-      green: '#00ff00',
-      blue: '#0000ff'
+    content: [
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                background: '#ffffff',
+                purpleDark: '#190E25',
+                blue: '#0FA3E2',
+                purple: '#6366F1',
+            },
+            fontFamily: {
+                sofiaSans: ['Sofia Sans', 'sans-serif'],
+            }
+        },
     },
-    extend: {
-      fontFamily: {
-        inter: ['Inter var'],
-      }
-    },
-  },
-  plugins: [],
+    plugins: [],
 }
 

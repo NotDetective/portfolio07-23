@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../resources/css/tailwind.css">
 <?php
 
 use Illuminate\Contracts\Http\Kernel;
