@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
-
-Route::get('/about-me', function () {
-    return view('');
-})->name('about-me');
-
-Route::get('/my-work', function () {
-    return view('');
-})->name('my-work');
-
-Route::get('/contact', function () {
-    return view('');
-})->name('contact');
+Route::get('/' , function () {
+    return Inertia::render('LandingPage');
+})->name('home');
