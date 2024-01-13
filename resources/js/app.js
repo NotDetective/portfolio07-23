@@ -1,7 +1,7 @@
 import {createApp, h} from 'vue';
 import {createInertiaApp, Link} from '@inertiajs/vue3';
 import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers';
-import Layout from './Shared/Layout.vue';
+import PortfolioLayout from "@/Shared/PortfolioLayout.vue";
 
 createInertiaApp({
     resolve: async (name) => {
@@ -11,7 +11,7 @@ createInertiaApp({
         );
         page.then((module) => {
             if (module.default.layout === undefined){
-                module.default.layout = Layout;
+                module.default.layout = PortfolioLayout;
             }
         });
         return page;

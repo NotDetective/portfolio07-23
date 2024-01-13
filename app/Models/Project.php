@@ -19,9 +19,4 @@ class Project extends Model implements HasMedia
         'url',
         'tags',
     ];
-
-    public function codes()
-    {
-        return $this->hasMany(Code::class);
-    }
 }

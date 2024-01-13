@@ -14,9 +14,4 @@ class ProgramingLanguage extends Model
         'description',
         'color',
     ];
-
-    public function codes()
-    {
-        return $this->hasMany(Code::class);
-    }
 }

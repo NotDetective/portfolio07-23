@@ -1,7 +1,4 @@
 <script setup>
-
-let text = `<?php echo $text; ?>`;
-
 </script>
 
 <template>
@@ -11,26 +8,20 @@ let text = `<?php echo $text; ?>`;
 
                 <div class="flex flex-col">
                     <h1 class="text-7xl text-gradient">
-                        Hi,
+                        Hi, I'm Micha.
                         <br>
-                        I'm Micha,
-                        <br>
-                        A software dev,
-                        <br>
-                        From the Netherlands.
+                        <span>Nice to meet you!</span>
                     </h1>
 
-                    <p class="text-4xl text-purpleDark/60">Software Developer student</p>
+                    <p class="text-4xl text-purpleDark/60">
+                        I'm a full-stack developer from The Netherlands.
+                    </p>
                 </div>
 
             </section>
 
             <section class="h-full w-1/2 flex items-center text-right mr-5">
-                <pre class="h-11/12">
-                    <code class="text-2xl text-gradient w-full">
-                        {{ text }}
-                    </code>
-                </pre>
+                <img src="https://placehold.co/600x400" alt="Hero" class="w-3/4">
             </section>
         </div>
     </div>
