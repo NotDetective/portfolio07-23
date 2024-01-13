@@ -15,6 +15,7 @@ defineProps({
 <template>
     <div class="group relative">
         <Link
+            :href="route"
             class=""
             :class="{ '': true }"
         >

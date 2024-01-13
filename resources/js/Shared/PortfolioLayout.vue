@@ -14,11 +14,8 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
                 </div>
 
                 <nav class="h-2/6 flex flex-col items-center justify-between">
-
-
                     <NavItem
-                        route=""
-                        details="Dashboard"
+                        :route="route('home')"
                     >
                         <svg
                             class="w-12 h-12"
@@ -37,8 +34,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
                     </NavItem>
 
                     <NavItem
-                        route=""
-                        details="Projects"
+                        :route="route('about')"
                     >
                         <svg
                             class="w-12 h-12"
@@ -57,8 +53,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
                     </NavItem>
 
                     <NavItem
-                        route=""
-                        details="my work"
+                        :route="route('work')"
                     >
                         <svg
                             class="w-12 h-12"
@@ -78,8 +73,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
                     </NavItem>
 
                     <NavItem
-                        route=""
-                        details="contact me"
+                        :route="route('contact')"
                     >
                         <svg
                             class="w-12 h-12"
