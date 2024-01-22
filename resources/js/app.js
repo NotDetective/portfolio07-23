@@ -23,7 +23,7 @@ createInertiaApp({
     },
     setup({el, App, props, plugin}) {
         return createApp({render: () => h(App, props)})
-            // .mixin({methods: {route}})
+            .mixin({methods: {route}})
             .use(plugin)
             .component('Link', Link)
             .mount(el)

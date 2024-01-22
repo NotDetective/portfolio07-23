@@ -4,21 +4,18 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
 </script>
 
 <template>
-    <div class="flex">
-        <div class="w-20 h-screen border-r-2 border-purpleDark p-2">
+    <div class="flex font-sofiaSans text-purpleDark">
+        <div class="w-24 h-screen border-r-3 border-gradient p-2">
             <div class="h-full flex flex-col items-center">
 
                 <div class="h-1/6">
-                    <img src="/images/smiley-logo-placeholder.png" alt="Website logo"
+                    <img :src=" '/images/smiley-logo-placeholder.png' " alt="Website logo"
                          class="rounded-full w-14 h-14">
                 </div>
 
                 <nav class="h-2/6 flex flex-col items-center justify-between">
-
-
                     <NavItem
-                        route=""
-                        details="Dashboard"
+                        :route="route('home')"
                     >
                         <svg
                             class="w-12 h-12"
@@ -37,8 +34,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
                     </NavItem>
 
                     <NavItem
-                        route=""
-                        details="Projects"
+                        :route="route('about')"
                     >
                         <svg
                             class="w-12 h-12"
@@ -57,8 +53,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
                     </NavItem>
 
                     <NavItem
-                        route=""
-                        details="my work"
+                        :route="route('work')"
                     >
                         <svg
                             class="w-12 h-12"
@@ -78,8 +73,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
                     </NavItem>
 
                     <NavItem
-                        route=""
-                        details="contact me"
+                        :route="route('contact')"
                     >
                         <svg
                             class="w-12 h-12"
@@ -101,7 +95,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
             </div>
         </div>
 
-        <main class="h-screen w-full">
+        <main class="h-screen w-full p-5">
             <slot/>
         </main>
 
