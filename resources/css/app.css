@@ -28,6 +28,7 @@
 
 .border-gradient{
     border-image-slice: 1;
-    border-width: 0 0 4px 0;
     border-image-source: var(--gradient);
 }
+
+
