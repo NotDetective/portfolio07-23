@@ -23,7 +23,7 @@ const calculateAge = () => {
             <div class="w-fit h-fit px-5 py-8 bg-white shadow-md rounded-lg flex flex-col items-center gap-5 text-3xl">
                 <h1 class="text-4xl text-center">Micha</h1>
                 <img
-                    class="rounded-full w-[250px] h-[250px]"
+                    class="rounded-full w-60 h-60"
                     src="https://placehold.co/300"
                 >
                 <div class="border-gradient border-b-4 w-80"/>

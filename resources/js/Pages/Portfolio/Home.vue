@@ -10,7 +10,7 @@
                     <h1 class="text-7xl text-gradient">
                         Hi, I'm Micha.
                         <br>
-                        <span>Nice to meet you!</span>
+                        <span>Nice to meet ya!</span>
                     </h1>
 
                     <p class="text-4xl text-purpleDark/60">
