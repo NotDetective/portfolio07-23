@@ -75,8 +75,7 @@ let possibleMessages = [
     'If (you === "Wout") { leave(); }',
 ]
 
-possibleMessages.push('So there are ' + possibleMessages.length + ' messages.');
-console.log(possibleMessages.length);
+possibleMessages.push('So there are ' + possibleMessages.length + 1 + ' messages.');
 
 let message = possibleMessages[Math.floor(Math.random() * possibleMessages.length)]
 
