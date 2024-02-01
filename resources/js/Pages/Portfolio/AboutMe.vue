@@ -1,5 +1,6 @@
 <script setup>
 import {Head} from "@inertiajs/vue3";
+import {ref} from "vue";
 
 const calculateAge = () => {
     const today = new Date();
@@ -28,7 +29,8 @@ const calculateAge = () => {
                 <h1 class="text-4xl text-center">Micha</h1>
                 <img
                     class="rounded-full w-60 h-60"
-                    src="https://placehold.co/300"
+                    :src=" 'images/profile-photo/me.jpeg'"
+                    alt="profile picture"
                 >
                 <div class="border-gradient border-b-4 w-80"/>
                 <p>Age {{ calculateAge() }}</p>

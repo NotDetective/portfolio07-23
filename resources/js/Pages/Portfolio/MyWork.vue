@@ -15,34 +15,52 @@ const changeParams = (value) => {
     params.set('show', value)
     window.history.replaceState({}, '', `${location.pathname}?${params}`)
 }
+
+let githubData = ref({});
+
+const getGithubData = async () => {
+    try {
+        const response = await fetch('https://api.github.com/users/NotDetective');
+        githubData.value = await response.json();
+    } catch (error) {
+        console.error('Error fetching github data:', error);
+    }
+}
+
+getGithubData();
 </script>
 
 <template>
     <Head title="My work" />
-
     <main
         class="flex justify-between w-full h-full"
     >
 
         <section class="flex flex-col w-1/4 items-center gap-5 py-3">
-            <div class="w-fit h-fit px-5 py-8 bg-white shadow-md rounded-lg flex flex-col items-center gap-5 text-3xl">
-                <h1 class="text-4xl text-center">Github</h1>
-                <div class="border-gradient border-b-4 w-80"/>
+            <a :href="githubData.html_url" target="_blank">
+                <div class="w-fit h-fit px-5 py-8 bg-white shadow-md rounded-lg flex flex-col items-center gap-5 text-3xl">
+                    <h1 class="text-4xl text-center">Github</h1>
+                    <div class="border-gradient border-b-4 w-80"/>
 
-                <img
-                    class="rounded-full w-52 h-52"
-                    src="https://placehold.co/300"
-                >
-                <p>
-                    NotDetective
-                </p>
-                <p>
-                    Student ROC Nijmgen
-                </p>
-                <p>
-                    Public Repos: 5
-                </p>
-            </div>
+                    <img
+                        class="rounded-full w-52 h-52"
+                        :src="githubData.avatar_url"
+                        alt="github profile picture"
+                    >
+                    <p class="flex flex-col items-center">
+                        {{ githubData.login }}
+                        <span class="text-xl text-custom-gray-200">
+                            ({{ githubData.name }})
+                        </span>
+                    </p>
+                    <p>
+                        {{ githubData.company }}
+                    </p>
+                    <p>
+                        Public Repos: {{ githubData.public_repos }}
+                    </p>
+                </div>
+            </a>
 
             <div class="flex flex-col items-start gap-5 w-[22.5rem]">
                 <MyWorkButton
