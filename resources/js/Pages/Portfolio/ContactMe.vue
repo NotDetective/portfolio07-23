@@ -54,6 +54,10 @@ let joke = ref(getRandomJoke())
                     @click="getRandomJoke"
                 />
             </div>
+            <p>
+                api by <a class="text-blue hover:border-b-2 hover:border-blue" href="https://sv443.net/jokeapi/v2/"
+                          target="_blank">sv443 (Sven Fehler)</a>
+            </p>
         </section>
 
         <section class="w-1/3 h-2/3 flex items-center justify-center">
