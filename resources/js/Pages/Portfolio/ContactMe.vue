@@ -1,7 +1,7 @@
 <script setup>
 import PrimaryButton from "@/Shared/Buttons/PrimaryButton.vue";
 import SimpleInput from "@/Shared/Form/SimpleInput.vue";
-import {useForm} from "@inertiajs/vue3";
+import {Head, useForm} from "@inertiajs/vue3";
 import SimpleTextarea from "@/Shared/Form/SimpleTextarea.vue";
 import {ref} from "vue";
 
@@ -35,6 +35,7 @@ let joke = ref(getRandomJoke())
 </script>
 
 <template>
+    <Head title="Contact" />
 
     <main
         class="flex justify-between h-full w-full "

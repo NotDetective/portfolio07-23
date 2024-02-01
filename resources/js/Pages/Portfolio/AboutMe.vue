@@ -1,4 +1,5 @@
 <script setup>
+import {Head} from "@inertiajs/vue3";
 
 const calculateAge = () => {
     const today = new Date();
@@ -16,6 +17,9 @@ const calculateAge = () => {
 </script>
 
 <template>
+    <Head title="About me" />
+
+
     <div
         class="w-full h-full flex justify-between py-7"
     >

@@ -16,6 +16,7 @@ createInertiaApp({
         });
         return page;
     },
+    title: (title) => `${title ? `${title} - ` : ''}${import.meta.env.VITE_APP_NAME}`,
     progress: {
         delay: 250,
         color: '#29d',
