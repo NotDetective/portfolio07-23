@@ -3,6 +3,7 @@ import MyWorkButton from "@/Shared/Buttons/MyWorkButton.vue";
 import GithubReposCard from "@/Shared/MyWork/GithubReposCard.vue";
 import {ref} from "vue";
 import ProjectCard from "@/Shared/MyWork/ProjectCard.vue";
+import {Head} from "@inertiajs/vue3";
 
 // get show out of url params
 const params = new URLSearchParams(window.location.search)
@@ -17,6 +18,8 @@ const changeParams = (value) => {
 </script>
 
 <template>
+    <Head title="My work" />
+
     <main
         class="flex justify-between w-full h-full"
     >

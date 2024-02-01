@@ -9,7 +9,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
             <div class="h-full flex flex-col items-center">
 
                 <div class="h-1/6">
-                    <img :src=" '/images/smiley-logo-placeholder.png' " alt="Website logo"
+                    <img :src=" '/images/logo/logo.png' " alt="Website logo"
                          class="rounded-full w-14 h-14">
                 </div>
 
