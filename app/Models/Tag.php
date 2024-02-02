@@ -5,15 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Message extends Model
+class Tag extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'taggable_id',
+        'taggable_type',
         'name',
-        'email',
-        'message',
-        'read',
-        'replied',
+        'type',
     ];
+
+    public function taggable()
+    {
+        return $this->morphTo();
+    }
 }

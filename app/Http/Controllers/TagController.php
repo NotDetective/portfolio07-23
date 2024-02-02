@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ProgramingLanguage;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class ProgramingLanguageController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class ProgramingLanguageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ProgramingLanguage $programingLaunguage)
+    public function show(Tag $tag)
     {
         //
     }
@@ -42,7 +42,7 @@ class ProgramingLanguageController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ProgramingLanguage $programingLaunguage)
+    public function edit(Tag $tag)
     {
         //
     }
@@ -50,7 +50,7 @@ class ProgramingLanguageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProgramingLanguage $programingLaunguage)
+    public function update(Request $request, Tag $tag)
     {
         //
     }
@@ -58,7 +58,7 @@ class ProgramingLanguageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ProgramingLanguage $programingLaunguage)
+    public function destroy(Tag $tag)
     {
         //
     }

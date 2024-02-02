@@ -5,13 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProgramingLanguage extends Model
+class Skils extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'programming_languages_id',
         'name',
-        'description',
         'color',
+        'description',
     ];
+
+    public function programmingLanguage()
+    {
+        return $this->belongsTo(ProgrammingLanguage::class);
+    }
+
+
 }

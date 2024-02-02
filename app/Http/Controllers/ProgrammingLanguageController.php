@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Code;
+use App\Models\ProgrammingLanguage;
 use Illuminate\Http\Request;
 
-class CodeController extends Controller
+class ProgrammingLanguageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class CodeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Code $code)
+    public function show(ProgrammingLanguage $programmingLanguage)
     {
         //
     }
@@ -42,7 +42,7 @@ class CodeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Code $code)
+    public function edit(ProgrammingLanguage $programmingLanguage)
     {
         //
     }
@@ -50,7 +50,7 @@ class CodeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Code $code)
+    public function update(Request $request, ProgrammingLanguage $programmingLanguage)
     {
         //
     }
@@ -58,7 +58,7 @@ class CodeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Code $code)
+    public function destroy(ProgrammingLanguage $programmingLanguage)
     {
         //
     }
