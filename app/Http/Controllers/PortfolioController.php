@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ProgrammingLanguage;
+use App\Models\Projects;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -27,6 +28,20 @@ class PortfolioController extends Controller
 
     public function work()
     {
-        return Inertia::render('Portfolio/MyWork');
+        $projects = Projects::with('programmingLanguage', 'tags')->get();
+
+        $repository = $projects->filter(function ($project) {
+            return $project->type === 'repository';
+        });
+
+        $projects = $projects->filter(function ($project) {
+            return $project->type === 'project';
+        });
+
+
+        return Inertia::render('Portfolio/MyWork', [
+            'projects' => $projects,
+            'repository' => $repository,
+        ]);
     }
 }

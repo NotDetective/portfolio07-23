@@ -21,7 +21,7 @@ class Projects extends Model
 
     public function programmingLanguage()
     {
-        return $this->belongsTo(ProgrammingLanguage::class);
+        return $this->hasOne(ProgrammingLanguage::class, 'id', 'programming_languages_id');
     }
 
     public function tags()

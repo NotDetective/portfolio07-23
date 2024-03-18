@@ -17,6 +17,6 @@ class ProgrammingLanguage extends Model
 
     public function projects()
     {
-        return $this->hasMany(Projects::class);
+        return $this->belongsToMany(Projects::class);
     }
 }
