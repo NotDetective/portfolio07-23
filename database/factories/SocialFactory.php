@@ -18,7 +18,7 @@ class SocialFactory extends Factory
     {
         return [
             'platform_name' => $this->faker->word,
-            'name' => $this->faker->word,
+            'username' => $this->faker->userName,
             'link' => $this->faker->url,
         ];
     }

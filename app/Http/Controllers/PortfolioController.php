@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ProgrammingLanguage;
 use App\Models\Projects;
+use App\Models\Social;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -23,7 +24,9 @@ class PortfolioController extends Controller
 
     public function contact()
     {
-        return Inertia::render('Portfolio/ContactMe');
+        return Inertia::render('Portfolio/ContactMe', [
+            'socials' => Social::all()
+        ]);
     }
 
     public function work()

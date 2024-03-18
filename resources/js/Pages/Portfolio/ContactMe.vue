@@ -5,6 +5,10 @@ import {Head, useForm} from "@inertiajs/vue3";
 import SimpleTextarea from "@/Shared/Form/SimpleTextarea.vue";
 import {ref} from "vue";
 
+defineProps({
+    'socials': Object,
+})
+
 let form = useForm({
     name: '',
     email: '',
@@ -64,21 +68,23 @@ let joke = ref(getRandomJoke())
         <section class="w-1/3 h-2/3 flex items-center justify-center">
             <div class="w-fit h-fit grid grid-cols-2 gap-7">
                 <div
-                    v-for="i in 5"
+                    v-for="social in socials"
                     class="bg-white shadow p-5 w-fit h-fit flex items-center gap-4 rounded">
                     <div>
-                        <img
-                            class="w-16 h-16 rounded-full"
-                            src="https://placehold.co/65"
-                            alt=""
-                        >
+                        <a :href="social.link" target="_blank">
+                            <img
+                                class="w-16 h-16 rounded-full"
+                                src="https://placehold.co/65"
+                                alt=""
+                            >
+                        </a>
                     </div>
                     <div>
                         <h1 class="text-3xl border-gradient border-b-3 w-40">
-                            LinkedIn
+                            {{ social.platform_name }}
                         </h1>
                         <p class="text-xl">
-                            Micha Elmans
+                            {{ social.username }}
                         </p>
                     </div>
                 </div>

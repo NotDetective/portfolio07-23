@@ -11,7 +11,7 @@ class Social extends Model
 
     protected $fillable = [
         'platform_name',
-        'name',
+        'username',
         'link',
     ];
 }
