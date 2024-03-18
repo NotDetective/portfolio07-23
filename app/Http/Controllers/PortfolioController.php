@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProgrammingLanguage;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -14,7 +15,9 @@ class PortfolioController extends Controller
 
     public function about()
     {
-        return Inertia::render('Portfolio/AboutMe');
+        return Inertia::render('Portfolio/AboutMe', [
+            'programmingLanguages' => ProgrammingLanguage::all(),
+        ]);
     }
 
     public function contact()

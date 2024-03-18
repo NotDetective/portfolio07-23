@@ -17,9 +17,9 @@ class ProgrammingLanguageFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
+            'type' => rand(0, 1) ? 'framework' : 'language',
+            'name' => $this->faker->unique()->word,
             'color' => $this->faker->hexColor,
-            'description' => $this->faker->text(100),
         ];
     }
 }

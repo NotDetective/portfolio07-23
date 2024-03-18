@@ -10,18 +10,13 @@ class ProgrammingLanguage extends Model
     use HasFactory;
 
     protected $fillable = [
+        'type',
         'name',
         'color',
-        'description',
     ];
 
     public function projects()
     {
         return $this->hasMany(Projects::class);
-    }
-
-    public function skills()
-    {
-        return $this->hasOne(Skils::class);
     }
 }
