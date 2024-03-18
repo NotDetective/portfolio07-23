@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@app.com',
         ]);
 
-        ProgrammingLanguage::factory(20)->create();
+        ProgrammingLanguage::factory(10)->create();
 
         Projects::factory(10)->create()
             ->each(function ($project) {
