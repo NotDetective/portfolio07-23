@@ -49,7 +49,7 @@ const calculateAge = () => {
                 <h1 class="text-4xl text-left">Skills</h1>
                 <div class="border-gradient border-b-4 self-center w-full"/>
 
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-3 gap-5">
 
                         <div
                             v-for="language in programmingLanguages"
