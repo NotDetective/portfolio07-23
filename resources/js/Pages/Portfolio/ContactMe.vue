@@ -5,6 +5,10 @@ import {Head, useForm} from "@inertiajs/vue3";
 import SimpleTextarea from "@/Shared/Form/SimpleTextarea.vue";
 import {ref} from "vue";
 
+defineProps({
+    'socials': Object,
+})
+
 let form = useForm({
     name: '',
     email: '',
@@ -14,24 +18,6 @@ let form = useForm({
 const submit = () => {
     alert('submitted')
 }
-
-const getRandomJoke = async () => {
-    try {
-        const response = await fetch('https://v2.jokeapi.dev/joke/Programming');
-        const data = await response.json();
-
-        if (data.type === 'single') {
-            joke.value = data.joke;
-        } else {
-            joke.value = `${data.setup} ${data.delivery}`;
-        }
-    } catch (error) {
-        console.error('Error fetching random joke:', error);
-    }
-};
-
-let joke = ref(getRandomJoke())
-
 </script>
 
 <template>
@@ -40,62 +26,49 @@ let joke = ref(getRandomJoke())
     <main
         class="flex justify-between h-full w-full "
     >
-        <section class="w-1/3 h-2/3 p-8 space-y-4 flex flex-col  justify-center">
-            <h1 class="text-4xl mb-4">Random Joke About Programming:</h1>
-
-            <h1 class="text-4xl">
-                <span class="text-gradient">
-                  {{ joke }}
-                </span>
-            </h1>
-
-            <div class="w-2/4">
-                <PrimaryButton
-                    text="Tell me another joke!"
-                    @click="getRandomJoke"
-                />
-            </div>
-            <p>
-                api by <a class="text-blue hover:border-b-2 hover:border-blue" href="https://sv443.net/jokeapi/v2/"
-                          target="_blank">sv443 (Sven Fehler)</a>
-            </p>
-        </section>
-
-        <section class="w-1/3 h-2/3 flex items-center justify-center">
-            <div class="w-fit h-fit grid grid-cols-2 gap-7">
+        <section class="w-2/3 h-2/3 flex items-center justify-center">
+            <div class="w-fit h-fit grid grid-cols-4 gap-7">
                 <div
-                    v-for="i in 5"
+                    v-for="social in socials"
                     class="bg-white shadow p-5 w-fit h-fit flex items-center gap-4 rounded">
                     <div>
-                        <img
-                            class="w-16 h-16 rounded-full"
-                            src="https://placehold.co/65"
-                            alt=""
-                        >
+                        <a :href="social.link" target="_blank">
+                            <img
+                                class="w-16 h-16 rounded-full"
+                                src="https://placehold.co/65"
+                                alt=""
+                            >
+                        </a>
                     </div>
                     <div>
                         <h1 class="text-3xl border-gradient border-b-3 w-40">
-                            LinkedIn
+                            {{ social.platform_name }}
                         </h1>
                         <p class="text-xl">
-                            Micha Elmans
+                            {{ social.username }}
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="w-1/3 h-2/3 flex justify-center items-center">
+        <section class="w-1/3 h-2/3 flex justify-center items-center grayscale">
             <div class="bg-white shadow w-fit h-fit p-5 rounded">
                 <div class="flex justify-between">
                     <h1 class="text-4xl">Contact Me</h1>
                 </div>
                 <div class="border-gradient border-b-4 w-96"/>
 
+                <p
+                    class="text-red-700 mt-2 text-2xl"
+                >
+                    Comming soon...
+                </p>
+
                 <form
-                    @submit.prevent="submit"
+                    @submit.prev ent="submit"
                     @keydown.enter.prevent="submit"
-                    class="mt-6 flex flex-col gap-6"
+                    class="mt-6 flex flex-col gap-6 cursor-not-allowed"
                 >
                     <SimpleInput
                         name="name"
@@ -120,6 +93,7 @@ let joke = ref(getRandomJoke())
 
                     <div class="w-2/5">
                         <PrimaryButton
+                            disabled
                             text="Send"
                             @click="submit"
                         />

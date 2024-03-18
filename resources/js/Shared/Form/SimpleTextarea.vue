@@ -14,7 +14,7 @@ defineProps({
 <template>
     <div class="w-full">
         <textarea
-            class="shadow text-xl px-2 py-0.5 w-full rounded"
+            class="shadow text-xl px-2 py-0.5 w-full rounded cursor-not-allowed"
             :name="name"
             :placeholder="placeholder"
             :value="modelValue"

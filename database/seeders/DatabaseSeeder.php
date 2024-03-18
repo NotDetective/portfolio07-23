@@ -3,10 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Code;
-use App\Models\Message;
-use App\Models\ProgramingLanguage;
-use App\Models\Project;
+use App\Models\ProgrammingLanguage;
+use App\Models\Projects;
+use App\Models\Skils;
+use App\Models\Social;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -22,10 +23,17 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@app.com',
         ]);
 
-        Message::factory(50)->create();
+        ProgrammingLanguage::factory(10)->create();
 
-        Project::factory(50)->create();
+        Projects::factory(10)->create()
+            ->each(function ($project) {
+                $project->tags()->sync(Tag::factory(3)->create([
+                    'type' => 'project',
+                ])->pluck('id'));
+            });
 
-        ProgramingLanguage::factory(50)->create();
+
+        Social::factory(10)->create();
     }
+
 }

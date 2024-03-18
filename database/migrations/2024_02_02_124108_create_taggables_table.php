@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('programing_languages', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->string('color');
-            $table->timestamps();
+        Schema::create('taggables', function (Blueprint $table) {
+            $table->foreignid('tag_id');
+            $table->foreignid('taggable_id');
+            $table->string('taggable_type');
         });
     }
 
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('programing_languages');
+        Schema::dropIfExists('taggables');
     }
 };

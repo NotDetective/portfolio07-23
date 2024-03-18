@@ -19,7 +19,7 @@ defineProps({
 
     <div class="w-full">
         <input
-            class="shadow text-xl px-2 w-full py-0.5 rounded"
+            class="shadow text-xl px-2 w-full py-0.5 rounded cursor-not-allowed"
             :type="type"
             :name="name"
             :placeholder="placeholder"

@@ -19,7 +19,7 @@ createInertiaApp({
     title: (title) => `${title ? `${title} - ` : ''}${import.meta.env.VITE_APP_NAME}`,
     progress: {
         delay: 250,
-        color: '#29d',
+        color: '#0FA3E2',
         showSpinner: true,
     },
     setup({el, App, props, plugin}) {

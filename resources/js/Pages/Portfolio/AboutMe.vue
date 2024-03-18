@@ -1,6 +1,9 @@
 <script setup>
 import {Head} from "@inertiajs/vue3";
-import {ref} from "vue";
+
+defineProps({
+    programmingLanguages: Object,
+})
 
 const calculateAge = () => {
     const today = new Date();
@@ -15,11 +18,11 @@ const calculateAge = () => {
 
     return age;
 }
+
 </script>
 
 <template>
     <Head title="About me" />
-
 
     <div
         class="w-full h-full flex justify-between py-7"
@@ -42,22 +45,22 @@ const calculateAge = () => {
         </section>
 
         <section class="h-full w-4/6 flex-col flex gap-y-56 items-end">
-            <div class="w-10/12 px-5 py-8 bg-white shadow-md rounded-lg flex flex-col gap-5 text-3xl">
+            <div class="w-9/12 px-5 py-8 bg-white shadow-md rounded-lg flex flex-col gap-5 text-3xl">
                 <h1 class="text-4xl text-left">Skills</h1>
                 <div class="border-gradient border-b-4 self-center w-full"/>
 
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-3 gap-5">
 
                         <div
-                            v-for="i in 8"
+                            v-for="language in programmingLanguages"
                         >
                             <div class="flex gap-3">
-                                <div class="w-9 h-9 bg-[#E44B23] rounded-full" />
-                                <p>HTML</p>
+                                <div
+                                    class="w-9 h-9 rounded-full"
+                                    :style="{ backgroundColor: language.color }"
+                                />
+                                <p>{{ language.name }}</p>
                             </div>
-                            <p class="text-xl">
-                                Used to make websites
-                            </p>
                         </div>
 
                 </div>
