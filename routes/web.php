@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,19 @@ Route::get('/contact', [PortfolioController::class, 'contact'])
     ->name('contact');
 Route::get('/my-work', [PortfolioController::class, 'work'])
     ->name('work');
+
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/login', [AuthController::class, 'show'])
+        ->name('login');
+    Route::post('/login', [AuthController::class, 'login'])
+        ->name('login.post');
+});
+
+Route::get('/logout', [AuthController::class, 'logout'])
+    ->name('logout');
+
+Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
+
+
+
+});
