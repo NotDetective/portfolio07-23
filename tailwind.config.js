@@ -10,7 +10,6 @@ export default {
             borderWidth: {
                 '3': '3px',
             },
-
             colors: {
                 background: '#ffffff',
                 purpleDark: '#190E25',

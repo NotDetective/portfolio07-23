@@ -16,12 +16,17 @@ class AuthController extends Controller
     public function login(AuthRequest $request)
     {
         if (auth()->attempt($request->only('email', 'password'), $request->remember)) {
-            request()->session()->regenerate();
-            // redirect to dashboard
             return to_route('dashboard');
         }
+
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => 'Email of wachtwoord is incorrect of bestaat niet',
         ]);
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+        return to_route('home');
     }
 }
