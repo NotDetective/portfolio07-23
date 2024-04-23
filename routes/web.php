@@ -36,6 +36,7 @@ Route::get('/logout', [AuthController::class, 'logout'])
 
 Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
 
-
-
+    Route::get('/', function () {
+        return inertia('Dashboard/Index');
+    })->name('dashboard');
 });

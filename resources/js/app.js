@@ -2,6 +2,7 @@ import {createApp, h} from 'vue';
 import {createInertiaApp, Link} from '@inertiajs/vue3';
 import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers';
 import PortfolioLayout from "@/Shared/PortfolioLayout.vue";
+import DashboardLayout from "@/Shared/DashboardLayout.vue";
 
 createInertiaApp({
     resolve: async (name) => {
@@ -10,6 +11,10 @@ createInertiaApp({
             import.meta.glob("./Pages/**/*.vue")
         );
         page.then((module) => {
+            // if dashboard is in the url, use the DashboardLayout
+            if (name.includes('Dashboard')){
+                module.default.layout = DashboardLayout;
+            }
             if (module.default.layout === undefined){
                 module.default.layout = PortfolioLayout;
             }
