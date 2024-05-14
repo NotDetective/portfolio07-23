@@ -20,7 +20,7 @@ Route::group(['middleware' => 'guest'], function () {
         ->name('login.post');
 });
 
-Route::get('/logout', [AuthController::class, 'logout'])
+Route::post('/logout', [AuthController::class, 'logout'])
     ->name('logout');
 
 Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
