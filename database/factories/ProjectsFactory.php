@@ -16,16 +16,12 @@ class ProjectsFactory extends Factory
      */
     public function definition(): array
     {
-        $type = $this->faker->randomElement(['repository', 'project']);
-
         return [
-            'programming_languages_id' => $type === 'repository' ? $this->faker->numberBetween(1, 10) : null,
-            'type' => $type,
             'name' => $this->faker->word,
-            'link' => $type === 'repository' ? $this->faker->url : null,
             'description' => $this->faker->text,
-            'archived' => $this->faker->boolean,
-            'last_update' => $type === 'repository' ? $this->faker->dateTimeBetween('-1 year', 'now') : null,
+            'short_description' => $this->faker->sentence,
+            'show' => $this->faker->boolean,
+            'status' => $this->faker->randomElement(['draft', 'published', 'archived', 'deleted', 'editing']),
         ];
     }
 }

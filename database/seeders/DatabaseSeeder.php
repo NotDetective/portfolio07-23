@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\GitProjects;
 use App\Models\ProgrammingLanguage;
 use App\Models\Projects;
 use App\Models\Skils;
@@ -25,13 +26,28 @@ class DatabaseSeeder extends Seeder
 
         ProgrammingLanguage::factory(10)->create();
 
-        Projects::factory(10)->create()
+        Projects::factory(10)->create([
+            'status' => 'published',
+            'show' => true,
+        ])
             ->each(function ($project) {
-                $project->tags()->sync(Tag::factory(3)->create([
+                $project->tags()->saveMany(Tag::factory(3)->create([
                     'type' => 'project',
-                ])->pluck('id'));
+                ]));
             });
 
+        Projects::factory(10)->create()
+            ->each(function ($project) {
+                $project->tags()->saveMany(Tag::factory(3)->create([
+                    'type' => 'project',
+                ]));
+            });
+
+        GitProjects::factory(10)->create([
+            'status' => 'approved',
+        ]);
+
+        GitProjects::factory(10)->create();
 
         Social::factory(10)->create();
     }

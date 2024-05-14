@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('git_projects', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
+            $table->foreignId('programming_language_id')->constrained()->onDelete('cascade');
+            $table->string('name', 255);
             $table->text('description');
-            $table->string('short_description', 255);
-            $table->boolean('show');
-            $table->enum('status', ['draft', 'published', 'archived', 'deleted', 'editing']);
+            $table->boolean('archived');
+            $table->timestamp('last_update');
+            $table->string('url', 255);
+            $table->enum('status', ['approved', 'pending', 'rejected']);
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('git_projects');
     }
 };

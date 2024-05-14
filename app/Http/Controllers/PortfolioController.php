@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GitProjects;
 use App\Models\ProgrammingLanguage;
 use App\Models\Projects;
 use App\Models\Social;
@@ -31,8 +32,13 @@ class PortfolioController extends Controller
         ]);
     }
 
-    public function work()
+    public function work($type = null)
     {
+
+        if (is_null($type)) {
+            $type = 'repositories';
+        }
+
         if (Cache::has('github')) {
             $github = Cache::get('github');
         } else {
@@ -40,21 +46,24 @@ class PortfolioController extends Controller
             Cache::put('github', $github, 60 * 60 * 24 * 2);
         }
 
-        $projects = Projects::with('programmingLanguage', 'tags')->get();
+        $projects = Projects::query()
+            ->where('status', 'published')
+            ->where('show', true)
+            ->select('id', 'name', 'description', 'short_description')
+            ->with('tags')
+            ->get();
 
-        $repository = $projects->filter(function ($project) {
-            return $project->type === 'repository';
-        });
-
-        $projects = $projects->filter(function ($project) {
-            return $project->type === 'project';
-        });
-
+        $repository = GitProjects::query()
+            ->with('programmingLanguage')
+            ->where('status', 'approved')
+            ->select('id', 'programming_language_id' ,'name', 'description', 'url')
+            ->get();
 
         return Inertia::render('Portfolio/MyWork', [
             'projects' => $projects,
             'repository' => $repository,
             'github' => $github,
+            'type' => $type,
         ]);
     }
 }

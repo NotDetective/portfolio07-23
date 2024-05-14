@@ -15,8 +15,8 @@ class ProgrammingLanguage extends Model
         'color',
     ];
 
-    public function projects()
+    public function GitProject()
     {
-        return $this->belongsToMany(Projects::class);
+        return $this->hasOne(GitProjects::class, 'programming_language_id');
     }
 }
