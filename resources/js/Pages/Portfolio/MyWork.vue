@@ -8,24 +8,13 @@ import {Head} from "@inertiajs/vue3";
 defineProps({
     'projects': Object,
     'repository': Object,
-    'github': Object
+    'github': Object,
+    type: String,
 })
-
-
-// get show out of url params
-const params = new URLSearchParams(window.location.search)
-
-let selected = ref(params.get('show') || 'repositories')
-
-const changeParams = (value) => {
-    selected.value = value
-    params.set('show', value)
-    window.history.replaceState({}, '', `${location.pathname}?${params}`)
-}
 </script>
 
 <template>
-    <Head title="My work" />
+    <Head title="My work"/>
 
     <main
         class="flex justify-between w-full h-full"
@@ -33,7 +22,8 @@ const changeParams = (value) => {
 
         <section class="flex flex-col w-1/4 items-center gap-5 py-3">
             <a :href="github.html_url" target="_blank">
-                <div class="w-fit h-fit px-5 py-8 bg-white shadow-md rounded-lg flex flex-col items-center gap-5 text-3xl">
+                <div
+                    class="w-fit h-fit px-5 py-8 bg-white shadow-md rounded-lg flex flex-col items-center gap-5 text-3xl">
                     <h1 class="text-4xl text-center">Github</h1>
                     <div class="border-gradient border-b-4 w-80"/>
 
@@ -58,22 +48,31 @@ const changeParams = (value) => {
             </a>
 
             <div class="flex flex-col items-start gap-5 w-[22.5rem]">
-                <MyWorkButton
-                    @click="changeParams('repositories')"
-                    :active="selected === 'repositories'"
-                    :text="'Repositories (' + Object.keys(repository).length + ')'"
-                />
+                <Link
+                    :href="route('work', 'repositories')"
+                    class="w-full"
+                >
+                    <MyWorkButton
+                        :active="type === 'repositories'"
+                        :text="'Repositories (' + Object.keys(repository).length + ')'"
+                    />
+                </Link>
 
-                <MyWorkButton
-                    @click="changeParams('projects')"
-                    :active="selected === 'projects'"
-                    :text="'Projects Worked On (' + Object.keys(projects).length + ')'"
-                />
+                <Link
+                    :href="route('work', 'projects')"
+                    class="w-full"
+                >
+                    <MyWorkButton
+                        @click="changeParams('projects')"
+                        :active="type === 'projects'"
+                        :text="'Projects Worked On (' + Object.keys(projects).length + ')'"
+                    />
+                </Link>
             </div>
         </section>
 
         <section
-            v-if="selected === 'repositories'"
+            v-if="type === 'repositories'"
             class="w-3/4 h-full grid grid-cols-3 gap-5 p-5 overflow-y-scroll"
         >
             <GithubReposCard
@@ -84,7 +83,7 @@ const changeParams = (value) => {
         </section>
 
         <section
-            v-else-if="selected === 'projects'"
+            v-else-if="type === 'projects'"
             class="w-3/4 h-full grid grid-cols-3 gap-7 p-5 overflow-y-scroll"
         >
             <ProjectCard
