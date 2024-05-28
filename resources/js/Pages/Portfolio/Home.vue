@@ -9,11 +9,11 @@
                         <span>Nice to meet ya!</span>
                     </h1>
 
-                    <p class="text-5xl text-purpleDark/60">
+                    <p class="text-5xl text-custom-dark-purple/60">
                         I'm a full-stack developer from The Netherlands.
                     </p>
                     <p
-                        class="text-2xl text-purpleDark/60"
+                        class="text-2xl text-custom-dark-purple/60"
                     >
                         {{ message }}
                     </p>

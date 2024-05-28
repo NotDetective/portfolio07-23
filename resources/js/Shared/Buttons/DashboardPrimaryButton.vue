@@ -1,4 +1,4 @@
-    <script setup>
+<script setup>
 
 defineProps({
     text: String,
@@ -19,10 +19,10 @@ defineProps({
         :disabled="disabled || loading"
         :class="{
             'opacity-50 cursor-not-allowed': disabled || loading,
-            'bg-gradient-to-l from-sky-600 to-sky-400': !disabled && !loading,
+            'bg-sky-400': !disabled && !loading,
             'bg-gray-400': disabled,
         }"
-        class="bg-gradient-to-l w-full from-sky-600 to-sky-400 text-xl text-white rounded px-2 py-0.5 font-medium transition-all duration-300 ease-in-out flex items-center justify-center gap-2"
+        class="text-xl text-white rounded px-3 py-1.5 font-medium transition-all duration-300 ease-in-out flex items-center justify-center gap-2"
     >
 
         <svg v-if="loading" class="w-5 h-5 text-gray-200 animate-spin dark:text-gray-600 fill-custom-blue-600"

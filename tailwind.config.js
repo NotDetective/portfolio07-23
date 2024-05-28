@@ -11,10 +11,12 @@ export default {
                 '3': '3px',
             },
             colors: {
-                background: '#ffffff',
-                purpleDark: '#190E25',
-                blue: '#0FA3E2',
-                purple: '#6366F1',
+                'background': '#ffffff',
+                'custom-dark-purple': '#190E25',
+                'custom-blue': '#0FA3E2',
+                'custom-purple': '#6366F1',
+                'custom-light-gray': '#cdcdcd',
+                'custom-gray': '#a7a7a7',
             },
             fontFamily: {
                 sofiaSans: ['Sofia Sans', 'sans-serif'],

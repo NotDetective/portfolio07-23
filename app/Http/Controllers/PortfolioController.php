@@ -20,8 +20,12 @@ class PortfolioController extends Controller
 
     public function about()
     {
+        $programmingLanguages = ProgrammingLanguage::query()
+            ->select('id', 'name', 'color')
+            ->get();
+
         return Inertia::render('Portfolio/AboutMe', [
-            'programmingLanguages' => ProgrammingLanguage::all(),
+            'programmingLanguages' => $programmingLanguages,
         ]);
     }
 

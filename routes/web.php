@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ProgrammingLanguageController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PortfolioController::class, 'index'])
@@ -29,7 +30,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
         return inertia('Dashboard/Index');
     })->name('dashboard');
 
-    //crud for skills
+    Route::group(['prefix' => 'skills'], function () {
+        Route::get('/', [ProgrammingLanguageController::class, 'index'])
+            ->name('skills.index');
+    });
 
     //crud for projects
 

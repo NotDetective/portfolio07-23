@@ -19,7 +19,7 @@ defineProps({
     <div class="flex items-center justify-between">
         <button
             type="submit"
-            class="bg-blue hover:bg-purple/75 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out flex items-center"
+            class="bg-custom-blue hover:bg-custom-purple/75 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out flex items-center"
             :disabled="disabled || loading"
             :class="{
                 'cursor-not-allowed opacity-50': disabled || loading,
@@ -30,7 +30,7 @@ defineProps({
             class="mr-2"
             role="status"
         >
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-200 animate-spin dark:text-gray-600 fill-blue"
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-200 animate-spin dark:text-gray-600 fill-custom-blue"
                  viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     class="fill-current text-white"

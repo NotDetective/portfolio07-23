@@ -12,7 +12,13 @@ class ProgrammingLanguageController extends Controller
      */
     public function index()
     {
-        //
+        $programmingLanguages = ProgrammingLanguage::query()
+            ->select('id', 'name', 'color' )
+            ->get();
+
+        return inertia('Dashboard/Skills/Index', [
+            'programmingLanguages' => $programmingLanguages,
+        ]);
     }
 
     /**

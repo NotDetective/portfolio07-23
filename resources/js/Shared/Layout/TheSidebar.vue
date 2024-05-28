@@ -37,14 +37,14 @@ watch(extended, newVal => localStorage.setItem('extended', newVal.toString()));
                 as="button"
                 method="POST"
                 :href="route('logout')"
-                class="flex justify-center items-center transition-all duration-100 text-purpleDark transform hover:text-blue"
-                :class="extended ? 'gap-4 mb-5' : 'flex-col'"
+                class="mb-7 w-fit h-fit flex justify-center items-center transition-all duration-100 text-custom-dark-purple transform hover:text-custom-blue"
+                :class="extended ? 'gap-4 ' : 'flex-col'"
             >
                 <svg class="fill-current h-7 w-7" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
 
                 <p
                     class="text-xl transition-all duration-100 transform"
-                    :class="extended ? 'opacity-100 w-fit' : 'opacity-0 w-0'"
+                    :class="extended ? 'opacity-100 w-fit' : 'opacity-0 w-0 h-0'"
                 >
                     Logout
                 </p>
@@ -56,7 +56,7 @@ watch(extended, newVal => localStorage.setItem('extended', newVal.toString()));
                     @click="extended = !extended"
                 >
                     <svg
-                        class="fill-current text-purpleDark transition-all duration-500 transform hover:text-blue"
+                        class="fill-current text-custom-dark-purple transition-all duration-500 transform hover:text-custom-blue"
                         :class="!extended ? 'rotate-180' : 'text-custom-gray-500'"
                         width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path id="Vector" d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"/>

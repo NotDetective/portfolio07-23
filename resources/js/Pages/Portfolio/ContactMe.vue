@@ -100,7 +100,7 @@ const submit = () => {
                     </div>
                     <p class="w-96 text-gray-500">
                         If you want to contact me, you can fill in the form above and I will get back to you as soon as
-                        possible. You can also contact me <a class="text-blue hover:border-b-2 hover:border-blue"
+                        possible. You can also contact me <a class="text-custom-blue hover:border-b-2 hover:border-custom-blue"
                                                              href="https://www.linkedin.com/in/micha-elmans-801144273/"
                                                              target="_blank">on LinkedIn</a> . I am looking forward to
                         hearing from you!

@@ -4,7 +4,7 @@ import NavItem from "@/Shared/Layout/NavItem.vue";
 </script>
 
 <template>
-    <div class="flex font-sofiaSans text-purpleDark">
+    <div class="flex font-sofiaSans text-custom-dark-purple">
         <div class="w-24 h-screen border-r-3 border-gradient p-2">
             <div class="h-full flex flex-col items-center">
 
