@@ -33,6 +33,16 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
     Route::group(['prefix' => 'skills'], function () {
         Route::get('/', [ProgrammingLanguageController::class, 'index'])
             ->name('skills.index');
+        Route::get('/create', [ProgrammingLanguageController::class, 'create'])
+            ->name('skills.create');
+        Route::post('/', [ProgrammingLanguageController::class, 'store'])
+            ->name('skills.store');
+        Route::get('/{programmingLanguage}/edit', [ProgrammingLanguageController::class, 'edit'])
+            ->name('skills.edit');
+        Route::put('/{programmingLanguage}', [ProgrammingLanguageController::class, 'update'])
+            ->name('skills.update');
+        Route::delete('/{programmingLanguage}', [ProgrammingLanguageController::class, 'destroy'])
+            ->name('skills.destroy');
     });
 
     //crud for projects

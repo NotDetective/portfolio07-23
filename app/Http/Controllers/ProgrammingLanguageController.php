@@ -26,7 +26,7 @@ class ProgrammingLanguageController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Dashboard/Skills/Add');
     }
 
     /**
@@ -38,19 +38,13 @@ class ProgrammingLanguageController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(ProgrammingLanguage $programmingLanguage)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(ProgrammingLanguage $programmingLanguage)
     {
-        //
+        return inertia('Dashboard/Skills/Edit', [
+            'programmingLanguage' => $programmingLanguage,
+    ]);
     }
 
     /**
